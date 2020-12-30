@@ -14,13 +14,17 @@ def get_exp_folder():
     folder = _paths[-2]
 
     # Create output folder is not exist yet.
-    _output_data_path = "../../../output_data"
-    assert os.path.exists(_output_data_path), "Project structure has been changed. utils.get_exp_folder() should be changed accordingly."
-    _output_data_path += f"/{folder}"
-    if not os.path.exists(_output_data_path):
+    _path = pathlib.Path("../../../output_data")
+    if not _path.is_dir():
+        print("Starting a new project? Congratulations! \n\nCreating output data path for the first time.")
+        print(f"mkdir {_path.resolve()}")
+        _path.mkdir()
+    _path = _path / folder
+    if not _path.is_dir():
+        _path.mkdir(exist_ok=True)
         _subs = ["tensorboard", "plots", "models", "saved_images", "videos", "tmp"]
         for _sub in _subs:
-            os.makedirs(f"{_output_data_path}/{_sub}", exist_ok=True)
+            (_path / _sub).mkdir(exist_ok=True)
     return folder
 
 

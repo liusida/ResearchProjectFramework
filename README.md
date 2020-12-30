@@ -13,4 +13,6 @@ Try to design a better practice.
 
 5. use `start_experiment.sh` to start the experiment, so we know what we executed.
 
+6. commit everything except `output_data` onto github every night when work ends.
+
 ![Design](structure.png)
