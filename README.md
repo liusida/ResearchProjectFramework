@@ -12,3 +12,5 @@ Try to design a better practice.
 4. `common` package includes all the tools needed. copy that with the exp folder, so we won't mess up the dependencies of earlier experiments.
 
 5. use `start_experiment.sh` to start the experiment, so we know what we executed.
+
+![Design](structure.png)
