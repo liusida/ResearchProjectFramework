@@ -3,7 +3,7 @@ Try to design a better practice.
 
 ## Design
 
-1. `output_data` folder is huge, so keep it in a separate place, so when we copy paste another experiment, we don't need to copy the output data.
+1. `output_data` folder will be huge, so keep it in a separate place, so when we copy paste another experiment, we don't need to copy the output data.
 
 2. every experiment need a hypothesis, so we would remember what we are testing.
 
